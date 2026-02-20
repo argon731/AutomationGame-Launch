@@ -1,0 +1,35 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf allure-results allure-report",
+    "test": "npm run clean && npx playwright test",
+    "report": "npx allure generate allure-results --clean -o allure-report && npx allure open allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3",
+    "@types/p-limit": "^2.1.0",
+    "@types/pngjs": "^6.0.5",
+    "allure": "^0.0.0",
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.4",
+    "exceljs": "^4.4.0",
+    "rimraf": "^6.1.2"
+  },
+  "dependencies": {
+    "@techstark/opencv-js": "^4.12.0-release.1",
+    "jimp": "^1.6.0",
+    "opencv-wasm": "^4.3.0-10",
+    "p-limit": "^7.2.0",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "sharp": "^0.34.5"
+  }
+}

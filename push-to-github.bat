@@ -1,0 +1,11 @@
+@echo off
+git config core.autocrlf false
+git config core.safecrlf false
+git config user.name "argon731"
+git config user.email "argon731@github.com"
+git add . 2>nul
+git commit -m "Initial commit: Automation Game Launch project"
+git branch -M main
+git remote remove origin 2>nul
+git remote add origin https://github.com/argon731/AutomationGame-Launch.git
+git push -u origin main
